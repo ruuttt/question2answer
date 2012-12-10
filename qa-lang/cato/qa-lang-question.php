@@ -1,0 +1,165 @@
+<?php
+	
+/*
+	Action2Reaction (c) Gideon Greenspan
+
+	http://www.action2reaction.org/
+
+	
+	File: qa-include/qa-lang-action.php
+	Version: See define()s at top of qa-include/qa-base.php
+	Description: Language phrases for action page
+
+
+	This program is free software; you can redistribute it and/or
+	modify it under the terms of the GNU General Public License
+	as published by the Free Software Foundation; either version 2
+	of the License, or (at your option) any later version.
+	
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	More about this license: http://www.action2reaction.org/license.php
+*/
+
+	return array(
+		'1_answer_title' => '1 Reaction',
+		'a_convert_to_c_on' => 'Convert this reaction into a reaction on reaction on:',
+		'a_convert_to_c' => 'Convert this reaction into a reaction on reaction',
+		'a_convert_warn_cs' => 'Warning: This conversion cannot be reversed and will also move this reaction\'s reaction on reactions.',
+		'a_convert_warn' => 'Warning: This conversion cannot be reversed.',
+		'a_notify_email' => 'Email me at this address if my reaction is selected or reacted on reaction on:',
+		'a_notify_label' => 'Email me if my reaction is selected or reacted on reaction on',
+		'a_notify_x_label' => 'Email me (^) if my reaction is selected or reacted on reaction on',
+		'a_waiting_your_approval' => 'This reaction is waiting for your approval',
+		'a_your_waiting_approval' => 'Your reaction will be checked and approved shortly.',
+		'add_answer_button' => 'Write a reaction',
+		'add_comment_button' => 'Write a reaction on this reaction', 
+		'add_q_favorites' => 'Add this action to my favorites',
+		'answer_button' => 'Write a reaction',
+		'answer_limit' => 'Too many reactions received - please try again in an hour',
+		'answer_must_confirm' => 'Please ^5confirm your email address^6 to react on this action.',
+		'answer_must_login' => 'Please ^1log in^2 or ^3register^4 to react on this action.',
+		'answer_q_popup' => 'react on this action',
+		'approve_button' => 'approve',
+		'ask_button' => 'Add the Action',
+		'ask_follow_from_a' => 'Your action will be related to this reaction:',
+		'ask_follow_title' => 'Add a related action',
+		'ask_limit' => 'Too many actions received - please try again in an hour',
+		'ask_must_confirm' => 'Please ^5confirm your email address^6 to Add an action.',
+		'ask_must_login' => 'Please ^1log in^2 or ^3register^4 to Add an action.',
+		'ask_same_q' => 'Before proceeding, please check your action was not added already:',
+		'ask_title' => 'Add an action',
+		'c_notify_email' => 'Email me at this address if a reaction on reaction is added after mine:',
+		'c_notify_label' => 'Email me if a reaction on reaction is added after mine',
+		'c_notify_x_label' => 'Email me (^) if a reaction on reaction is added after mine',
+		'c_waiting_your_approval' => 'This reaction on reaction is waiting for your approval',
+		'c_your_waiting_approval' => 'Your reaction on reaction will be checked and approved shortly.',
+		'category_js_note' => 'To select any category, please enable Javascript in your web browser.',
+		'category_required' => 'Please choose a category',
+		'claim_button' => 'I wrote this',
+		'clear_flags_button' => 'clear flags',
+		'clear_flags_popup' => 'Remove flags by all users',
+		'close_button' => 'close',
+		'close_duplicate_error' => 'The duplicate action could not be found - please try entering the number from a different action URL, e.g. 123.',
+		'close_duplicate' => 'This is a duplicate of another action',
+		'close_form_button' => 'Close action',
+		'close_form_title' => 'Close this action',
+		'close_original_note' => 'You can also enter the action number from the URL, e.g. 123.',
+		'close_original_title' => 'URL of the original action:',
+		'close_q_popup' => 'Close this action to any new reactions',
+		'close_reason_title' => 'Reason for closing this action:',
+		'closed_as_duplicate' => 'closed as a duplicate of:',
+		'closed_with_note' => 'closed with the note:',
+		'comment_a_popup' => 'Add a reaction on this reaction',
+		'comment_button' => 'Write a reaction',
+		'comment_limit' => 'Too many reaction on reactions received - please try again in an hour',
+		'comment_must_confirm' => 'Please ^5confirm your email address^6 to add a reaction on reaction.',
+		'comment_must_login' => 'Please ^1log in^2 or ^3register^4 to add a reaction on reaction.',
+		'comment_on_a' => 'On reaction: ',
+		'comment_on_q' => 'On action: ',
+		'comment_q_popup' => 'Add a reaction on this action',
+		'delete_a_popup' => 'Delete this reaction permanently',
+		'delete_button' => 'delete',
+		'delete_c_popup' => 'Delete this reaction on reaction permanently',
+		'delete_q_popup' => 'Delete this action permanently',
+		'duplicate_content' => 'Your submission appears to be a duplicate.',
+		'edit_a_popup' => 'Edit this reaction',
+		'edit_a_title' => 'Edit reaction',
+		'edit_button' => 'edit',
+		'edit_c_popup' => 'Edit this reaction on reaction',
+		'edit_c_title' => 'Edit reaction on reaction',
+		'edit_must_confirm' => 'Please ^5confirm your email address^6 to edit this.',
+		'edit_must_login' => 'Please ^1log in^2 or ^3register^4 to edit this.',
+		'edit_q_popup' => 'Edit this action',
+		'edit_q_title' => 'Edit Action',
+		'example_tags' => 'Example tags: ',
+		'flag_a_popup' => 'Flag this reaction as spam or inappropriate',
+		'flag_button' => 'flag',
+		'flag_c_popup' => 'Flag this reaction on reaction as spam or inappropriate',
+		'flag_hide_button' => 'flag and hide',
+		'flag_limit' => 'Too many posts flagged - please try again in an hour',
+		'flag_must_confirm' => 'Please ^5confirm your email address^6 to flag posts.',
+		'flag_must_login' => 'Please ^1log in^2 or ^3register^4 to flag posts.',
+		'flag_not_allowed' => 'Flagging this is not allowed',
+		'flag_q_popup' => 'Flag this action as spam or inappropriate',
+		'follow_a_popup' => 'Add a new action relating to this reaction',
+		'follow_button' => 'add related action',
+		'follows_a' => 'related to a reaction for:',
+		'follows_q' => 'about the action:',
+		'hide_a_popup' => 'Hide this reaction',
+		'hide_button' => 'hide',
+		'hide_c_popup' => 'Hide this reaction on reaction',
+		'hide_q_popup' => 'Hide this action',
+		'matching_tags' => 'Matching tags: ',
+		'max_tags_x' => 'A maximum of ^ tags are allowed',
+		'min_tags_x' => 'Please provide at least ^ tag/s',
+		'notify_email_note' => 'Privacy: Your email address will only be used for sending these notifications.',
+		'q_category_label' => 'Issue:',
+		'q_content_label' => 'Explain your action here. It is import when you write your action to be clar about:blah 1, blah 2:',
+		'q_hidden_author' => 'This action has been hidden by its author',
+		'q_hidden_flagged' => 'This action has been flagged and hidden',
+		'q_hidden_other' => 'This action has been hidden',
+		'q_notify_email' => 'Email me at this address if there is a reaction on my action or if there is a reaction on my reaction:',
+		'q_notify_label' => 'Email me if there is a reaction on my action or if there is a reaction on my reaction',
+		'q_notify_x_label' => 'Email me (^) if there is a reaction on my action or if there is a reaction on my reaction',
+		'q_tags_comma_label' => 'Tags - use comma (,) as a separator:',
+		'q_tags_label' => '',
+		'q_title_label' => 'Syntax: action title1:action title2, where "action title1" is at most 2 or 3 words, you should seperate "action title1" and "action title2" by a ":"',
+		'q_waiting_approval' => 'This action is waiting for approval',
+		'q_waiting_your_approval' => 'This action is waiting for your approval',
+		'q_your_waiting_approval' => 'Your action will be checked and approved shortly.',
+		'recat_button' => 'recategorize',
+		'recat_popup' => 'Change this action\'s category',
+		'recat_q_title' => 'Recategorize action',
+		'reject_button' => 'reject',
+		'remove_q_favorites' => 'Remove this action from my favorites',
+		'reopen_button' => 'reopen',
+		'reply_button' => 'reply',
+		'reply_c_popup' => 'Reply to this reaction on reaction',
+		'reshow_button' => 'reshow',
+		'retag_button' => 'retag',
+		'retag_cat_popup' => 'Change this action\'s category or tags',
+		'retag_popup' => 'Change this action\'s tags',
+		'retag_q_title' => 'Retag action',
+		'select_popup' => 'Click to select as best reaction',
+		'select_text' => 'Best reaction',
+		'show_1_comment' => 'Show 1 reaction on reaction',
+		'show_1_previous_comment' => 'Show 1 previous reaction on reaction',
+		'show_x_comments' => 'Show ^ reaction on reactions',
+		'show_x_previous_comments' => 'Show ^ previous reaction on reactions',
+		'unflag_button' => 'unflag',
+		'unflag_popup' => 'Remove the flag that you added',
+		'unselect_popup' => 'Click to remove selection',
+		'x_answers_title' => '^ Reactions',
+		'your_answer_title' => 'Your reaction',
+		'your_comment_a' => 'Your reaction on this reaction:',
+		'your_comment_q' => 'Your reaction on this action:',
+	);
+	
+
+/*
+	Omit PHP closing tag to help avoid accidental output
+*/
