@@ -410,14 +410,54 @@
 				
 			} else {
 				$fields['vote_up_tags']='TITLE="'.qa_lang_html('main/vote_up_popup').'" NAME="'.qa_html('vote_'.$postid.'_1_'.$elementid).'" '.$onclick;
-				
-				if (strpos($voteview, '-uponly-level')) {
-					$fields['vote_state']='up_only';
-					$fields['vote_down_tags']='TITLE="'.qa_lang_html('main/vote_disabled_down').'"';
-				
-				} else {
-					$fields['vote_state']='enabled';
-					$fields['vote_down_tags']='TITLE="'.qa_lang_html('main/vote_down_popup').'" NAME="'.qa_html('vote_'.$postid.'_-1_'.$elementid).'" '.$onclick;
+		
+		    // calculation new points for the case the user clicks on down or upvote button
+				if ($isquestion){
+					$newpointsafterdownvote = qa_get_logged_in_points() + ((@$post['uservote']>0) ? -1*qa_opt('points_vote_up_q') : qa_opt('points_vote_down_q'));
+					$newpointsafterupvote = qa_get_logged_in_points() + ((@$post['uservote']<0) ? -1*qa_opt('points_vote_down_q') : qa_opt('points_vote_up_q'));
+	
+				}else{			
+					$newpointsafterdownvote = qa_get_logged_in_points() + ((@$post['uservote']>0) ? -1*qa_opt('points_vote_up_a') : qa_opt('points_vote_down_a'));
+					$newpointsafterupvote = qa_get_logged_in_points() + ((@$post['uservote']<0) ? -1*qa_opt('points_vote_down_a') : qa_opt('points_vote_up_a'));
+				}
+				if($newpointsafterdownvote<0){
+					// If after downvote user will have less than 0 points, then hide downvoting button
+					if($newpointsafterupvote<0){
+						// If after upvote user will have less than 0 points, then hide upvoting button
+						$fields['vote_state']='disabled';
+						$fields['vote_up_tags']='TITLE="'.qa_lang_html('main/vote_disabled_level').'"';
+						$fields['vote_down_tags']=$fields['vote_up_tags'];
+	
+					}else{
+						// only hide downvoting button
+						$fields['vote_state']='up_only';
+						$fields['vote_down_tags']='TITLE="'.qa_lang_html('main/vote_disabled_level').'"';
+					}
+				}else{
+					if($newpointsafterupvote<0){
+						// only hide upvoting button
+						if (strpos($voteview, '-uponly-level')) {
+							$fields['vote_state']='disabled';
+							$fields['vote_down_tags']='TITLE="'.qa_lang_html('main/vote_disabled_down').'"';
+							$fields['vote_up_tags']='TITLE="'.qa_lang_html('main/vote_disabled_level').'"';
+						
+						} else {
+							// vote_state 'down_only' does not exist. Therfore use disabled state. 
+							$fields['vote_state']='disabled';
+							$fields['vote_down_tags']='TITLE="'.qa_lang_html('main/vote_disabled_down').'"';
+							$fields['vote_up_tags']='TITLE="'.qa_lang_html('main/vote_disabled_level').'"';
+						}
+					}else{			
+						// after click on either up or downvote button, points will be >0
+						if (strpos($voteview, '-uponly-level')) {
+							$fields['vote_state']='up_only';
+							$fields['vote_down_tags']='TITLE="'.qa_lang_html('main/vote_disabled_down').'"';
+						
+						} else {
+							$fields['vote_state']='enabled';
+							$fields['vote_down_tags']='TITLE="'.qa_lang_html('main/vote_down_popup').'" NAME="'.qa_html('vote_'.$postid.'_-1_'.$elementid).'" '.$onclick;
+						}
+					}
 				}
 			}
 		}
