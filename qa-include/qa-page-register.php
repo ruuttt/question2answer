@@ -81,11 +81,13 @@
 				qa_set_logged_in_user($userid, $inhandle);
 	
 				$topath=qa_get('to');
-				
+/*				
 				if (isset($topath))
 					qa_redirect_raw(qa_path_to_root().$topath); // path already provided as URL fragment
 				else
 					qa_redirect('');
+*/
+				qa_redirect('welcome');
 			}
 			
 		} else
