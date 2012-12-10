@@ -92,6 +92,7 @@
 			'kh' => 'Khmer - ភាសាខ្មែរ',
 			'ko' => 'Korean - 한국어',
 			'lt' => 'Lithuanian - Lietuvių',
+			'cato' => 'CATO',
 			'nl' => 'Dutch - Nederlands',
 			'no' => 'Norwegian - Norsk',
 			'pl' => 'Polish - Polski',
