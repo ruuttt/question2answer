@@ -5,18 +5,18 @@
 */
 
 return array(
-	'questions_by' => 'Questions asked by ^',
-	'answers_by' => 'Answers posted by ^',
+	'questions_by' => 'Actions asked by ^',
+	'answers_by' => 'Reaction posted by ^',
 
-	'question' => 'question',
-	'questions' => 'questions',
-	'answer' => 'answer',
-	'answers' => 'answers',
+	'question' => 'action',
+	'questions' => 'actions',
+	'answer' => 'reaction',
+	'answers' => 'reactions',
 	'vote' => 'vote',
 	'votes' => 'votes',
 
-	'best_answer_given' => 'answer selected',
-	'best_answers_given' => 'answers selected',
-	'best_answer_received' => 'best answer',
-	'best_answers_received' => 'best answers',
+	'best_answer_given' => 'reaction selected',
+	'best_answers_given' => 'rections selected',
+	'best_answer_received' => 'best reaction',
+	'best_answers_received' => 'best reactions',
 );
