@@ -161,9 +161,9 @@
 		true, // show question counts in category navigation
 		$explicitqa ? 'qa/' : '', // prefix for links in category navigation
 		qa_opt('feed_for_qa') ? 'qa' : null, // prefix for RSS feed paths (null to hide)
-		(count($questions)<$pagesize) // suggest what to do next
+/*	count($questions)<$pagesize) // suggest what to do next
 			? qa_html_suggest_ask($categoryid)
-			: qa_html_suggest_qs_tags(qa_using_tags(), qa_category_path_request($categories, $categoryid)),
+			: qa_html_suggest_qs_tags(qa_using_tags(), qa_category_path_request($categories, $categoryid))*/'',
 		null, // page link params
 		null, // category nav params
 		$favorite // has user favorited this category
