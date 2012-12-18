@@ -62,7 +62,7 @@
 		'comment_edited' => 'reaction on reaction edited',
 		'comment_moved' => 'reaction on reaction moved',
 		'comment_reshown' => 'reaction on reaction reshown',
-		'commented' => 'reaction on reacted',
+		'commented' => 'written',
 		'date_day_min_digits' => 1, // 1 or 2
 		'date_format_other_years' => '^month ^day, ^year',
 		'date_format_this_year' => '^month ^day',
@@ -113,7 +113,7 @@
 		'nav_no_answer' => 'No reaction',
 		'nav_no_selected_answer' => 'No selected reaction',
 		'nav_no_upvoted_answer' => 'No upvoted reaction',
-		'nav_qa' => 'Q&A',
+		'nav_qa' => 'Recent changes',
 		'nav_qs' => 'Actions',
 		'nav_register' => 'Register',
 		'nav_tags' => 'Tags',

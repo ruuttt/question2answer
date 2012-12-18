@@ -39,8 +39,8 @@
 		'lecturer'=>'Lecturer',
 		'preacher'=>'Preacher',
 
-		'commenter'=>'Reaction On Reactioner',
-		'commentator'=>'Reaction On Reactionator',
+		'commenter'=>'Commenter',
+		'commentator'=>'Commentator',
 		'annotator'=>'Annotator',
 					
 		'voter'=>'Voter',
