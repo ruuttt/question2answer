@@ -58,9 +58,15 @@ width:980px; margin:0 auto; text-align:left;}
 h1 {margin:1em 0 0.5em 0; color:#307E01; font-size:28px; font-weight:bold;}
 h2 {font-size:22px; color:#339933; padding-top:12px; clear:both;}
 
-.qa-error {background:#fed8d8 url(error-bg.png) repeat-x left top; border:2px solid #cc0000; color:#cc0000; font-size:18px; padding:.5em; margin:1em 0; }
-	.qa-error a {color:#900; text-decoration:underline;}
-	.qa-error a:hover {color:#f00;}
+.qa-favoriting {float:right; padding-right:16px;}
+
+.qa-favorite-button,.qa-favorite-hover,.qa-unfavorite-button,.qa-unfavorite-hover {background:url(favorite-heart2.png) no-repeat; border:0; height:49px; width:50px;}
+	.qa-favorite-button {background-position: 0 -49px;}
+	.qa-favorite-hover,.qa-favorite-button:hover {background-position: 0 0px;}
+	.qa-unfavorite-button {background-position: 0 -98px;}
+	.qa-unfavorite-hover,.qa-unfavorite-button:hover {background-position: 0 0px;}
+.qa-favorite-image {background:url(favorite-heart2.png) no-repeat; background-position: 0 -49px; border:0; margin:2px; height:49px; width:50px; vertical-align:middle; display:inline-block;}
+
 
 /* Page sections */
 
