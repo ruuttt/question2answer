@@ -1,0 +1,45 @@
+[submodule "qa-plugin/faq"]
+	path = qa-plugin/faq
+	url = https://github.com/NoahY/q2a-faq.git
+[submodule "qa-plugin/admin-plus"]
+	path = qa-plugin/admin-plus
+	url = https://github.com/NoahY/q2a-admin-plus.git
+[submodule "qa-plugin/badges"]
+	path = qa-plugin/badges
+	url = git@github.com:ruuttt/q2a-badges.git
+[submodule "qa-plugin/book"]
+	path = qa-plugin/book
+	url = git@github.com:ruuttt/q2a-book.git
+[submodule "qa-plugin/confirm"]
+	path = qa-plugin/confirm
+	url = https://github.com/NoahY/q2a-confirm.git
+[submodule "qa-plugin/Google-Analytics"]
+	path = qa-plugin/Google-Analytics
+	url = https://github.com/kufeiko/QA-Google-Analytics-Plugin.git
+[submodule "qa-plugin/history"]
+	path = qa-plugin/history
+	url = https://github.com/NoahY/q2a-history.git
+[submodule "qa-plugin/qmap"]
+	path = qa-plugin/qmap
+	url = git@github.com:ruuttt/q2a-qmap.git
+[submodule "qa-plugin/poll"]
+	path = qa-plugin/poll
+	url = git@github.com:ruuttt/q2a-poll.git
+[submodule "qa-plugin/print"]
+	path = qa-plugin/print
+	url = https://github.com/NoahY/q2a-print.git
+[submodule "qa-plugin/privileges"]
+	path = qa-plugin/privileges
+	url = git@github.com:ruuttt/q2a-privileges.git
+[submodule "qa-plugin/role-markers"]
+	path = qa-plugin/role-markers
+	url = https://github.com/NoahY/q2a-role-markers.git
+[submodule "qa-plugin/signatures"]
+	path = qa-plugin/signatures
+	url = https://github.com/NoahY/q2a-signatures.git
+[submodule "qa-plugin/user-activity-plus"]
+	path = qa-plugin/user-activity-plus
+	url = https://github.com/svivian/q2a-user-activity-plus.git
+[submodule "qa-plugin/widget-anywhere"]
+	path = qa-plugin/widget-anywhere
+	url = https://github.com/svivian/q2a-widget-anywhere.git
