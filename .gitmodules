@@ -1,9 +1,6 @@
 [submodule "qa-plugin/faq"]
 	path = qa-plugin/faq
 	url = https://github.com/NoahY/q2a-faq.git
-[submodule "qa-plugin/admin-plus"]
-	path = qa-plugin/admin-plus
-	url = https://github.com/NoahY/q2a-admin-plus.git
 [submodule "qa-plugin/badges"]
 	path = qa-plugin/badges
 	url = git@github.com:ruuttt/q2a-badges.git
@@ -37,9 +34,12 @@
 [submodule "qa-plugin/signatures"]
 	path = qa-plugin/signatures
 	url = https://github.com/NoahY/q2a-signatures.git
-[submodule "qa-plugin/user-activity-plus"]
-	path = qa-plugin/user-activity-plus
-	url = https://github.com/svivian/q2a-user-activity-plus.git
 [submodule "qa-plugin/widget-anywhere"]
 	path = qa-plugin/widget-anywhere
 	url = https://github.com/svivian/q2a-widget-anywhere.git
+[submodule "qa-plugin/user-activity-plus"]
+	path = qa-plugin/user-activity-plus
+	url = git@github.com:ruuttt/q2a-user-activity-plus.git
+[submodule "qa-plugin/admin-plus"]
+	path = qa-plugin/admin-plus
+	url = git@github.com:ruuttt/q2a-admin-plus.git
