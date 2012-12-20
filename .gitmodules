@@ -46,3 +46,6 @@
 [submodule "qa-plugin/newsletter"]
 	path = qa-plugin/newsletter
 	url = git@github.com:ruuttt/q2a-newsletter.git
+[submodule "qa-plugin/email-formating"]
+	path = qa-plugin/email-formating
+	url = git@github.com:ruuttt/q2a-email-formating.git
