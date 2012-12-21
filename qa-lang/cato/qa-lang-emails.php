@@ -25,8 +25,8 @@
 */
 
 	return array(
-		'a_commented_body' => "Your reaction on ^site_title has a new reaction on reaction by ^c_handle:\n\n^open^c_content^close\n\nYour reaction was:\n\n^open^c_context^close\n\nYou may respond by adding your own reaction on reaction:\n\n^url\n\nThank you,\n\n^site_title",
-		'a_commented_subject' => 'Your ^site_title reaction has a new reaction on reaction',
+		'a_commented_body' => "Your reaction on ^site_title has a new comment by ^c_handle:\n\n^open^c_content^close\n\nYour reaction was:\n\n^open^c_context^close\n\nYou may respond by adding your own comment:\n\n^url\n\nThank you,\n\n^site_title",
+		'a_commented_subject' => 'Your ^site_title reaction has a new comment',
 
 		'a_followed_body' => "Your reaction on ^site_title has a new related action by ^q_handle:\n\n^open^q_title^close\n\nYour reaction was:\n\n^open^a_content^close\n\nClick below to reaction the new action:\n\n^url\n\nThank you,\n\n^site_title",
 		'a_followed_subject' => 'Your ^site_title reaction has a related action',
@@ -34,13 +34,13 @@
 		'a_selected_body' => "Congratulations! Your reaction on ^site_title has been selected as the best by ^s_handle:\n\n^open^a_content^close\n\nThe action was:\n\n^open^q_title^close\n\nClick below to see your reaction:\n\n^url\n\nThank you,\n\n^site_title",
 		'a_selected_subject' => 'Your ^site_title reaction has been selected!',
 
-		'c_commented_body' => "A new reaction on reaction by ^c_handle has been added after your reaction on reaction on ^site_title:\n\n^open^c_content^close\n\nThe discussion is following:\n\n^open^c_context^close\n\nYou may respond by adding another reaction on reaction:\n\n^url\n\nThank you,\n\n^site_title",
-		'c_commented_subject' => 'Your ^site_title reaction on reaction has been added to',
+		'c_commented_body' => "A new comment by ^c_handle has been added after your comment on ^site_title:\n\n^open^c_content^close\n\nThe discussion is following:\n\n^open^c_context^close\n\nYou may respond by adding another comment:\n\n^url\n\nThank you,\n\n^site_title",
+		'c_commented_subject' => 'Your ^site_title comment has been added to',
 
 		'confirm_body' => "Please click below to confirm your email address for ^site_title.\n\n^url\n\nThank you,\n^site_title",
 		'confirm_subject' => '^site_title - Email Address Confirmation',
 
-		'feedback_body' => "Reaction on reactions:\n^message\n\nName:\n^name\n\nEmail:\n^email\n\nPrevious page:\n^previous\n\nUser:\n^url\n\nIP address:\n^ip\n\nBrowser:\n^browser",
+		'feedback_body' => "Comments:\n^message\n\nName:\n^name\n\nEmail:\n^email\n\nPrevious page:\n^previous\n\nUser:\n^url\n\nIP address:\n^ip\n\nBrowser:\n^browser",
 		'feedback_subject' => '^ feedback',
 
 		'flagged_body' => "A post by ^p_handle has received ^flags:\n\n^open^p_context^close\n\nClick below to see the post:\n\n^url\n\nThank you,\n\n^site_title",
@@ -60,8 +60,8 @@
 		'q_answered_body' => "Your action on ^site_title has received a reaction from ^a_handle:\n\n^open^a_content^close\n\nYour action was:\n\n^open^q_title^close\n\n^url\n\nThank you,\n\nThe ^site_title team",
 		'q_answered_subject' => 'Your ^site_title action has received a reaction',
 
-		'q_commented_body' => "Your action on ^site_title has a new reaction on reaction by ^c_handle:\n\n^open^c_content^close\n\nYour action was:\n\n^open^c_context^close\n\nYou may respond by adding your own reaction on reaction:\n\n^url\n\nThank you,\n\n^site_title",
-		'q_commented_subject' => 'Your ^site_title action has a new reaction on reaction',
+		'q_commented_body' => "Your action on ^site_title has a new comment by ^c_handle:\n\n^open^c_content^close\n\nYour action was:\n\n^open^c_context^close\n\nYou may respond by adding your own comment:\n\n^url\n\nThank you,\n\n^site_title",
+		'q_commented_subject' => 'Your ^site_title action has a new comment',
 
 		'q_posted_body' => "A new action has been added by ^q_handle:\n\n^open^q_title\n\n^q_content^close\n\nClick below to see the action:\n\n^url\n\nThank you,\n\n^site_title",
 		'q_posted_subject' => '^site_title has a new action',

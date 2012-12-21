@@ -387,7 +387,7 @@ background:#D8D8D8;
 /* Classes passed to theme */
 
 .qa-user-link {color:#206b00; font-weight:bold;}
-.qa-category-link {color:#1e5568; font-weight:bold;}
+.qa-category-link {color:#206B00; font-weight:bold;}
 .qa-tag-link {background:url(tag-icon.png) no-repeat left center; color:#206b00 !important; font-size:12px; height:16px; display:inline-block; display:-moz-inline-stack; margin-right:4px; margin-bottom:3px; padding-left:18px; vertical-align:middle; text-decoration:none !important;}
 	.qa-tag-link:hover {text-decoration:underline !important;}
 .qa-avatar-image {border:0; vertical-align:middle;}
