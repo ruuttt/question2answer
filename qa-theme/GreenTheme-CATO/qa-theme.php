@@ -25,7 +25,7 @@
 	More about this license: http://www.question2answer.org/license.php
 */
      
-if ((!qa_is_logged_in()) and !((strpos(qa_self_html(),'login') !== false ))) {	
+if ((!qa_is_logged_in()) and !((strpos(qa_self_html(),'login') !== false )||(strpos(qa_self_html(),'forgot') !== false ))) {	
 	qa_redirect('login');
 }else{
 	
