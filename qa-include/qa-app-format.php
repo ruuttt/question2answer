@@ -1052,13 +1052,20 @@
 		
 		$navigation=array();
 		
-		if (!isset($parentid))
+		if (!isset($parentid)){
+			$numq = 0;
+			if (isset($parentcategories[$parentid]))
+				foreach ($parentcategories[$parentid] as $category) 
+				  $numq += $category['qcount'];
+		
 			$navigation['all']=array(
 				'url' => qa_path_html($pathprefix, $pathparams),
 				'label' => qa_lang_html('main/all_categories'),
 				'selected' => !count($selecteds),
+				'note' => $showqcount ? ('('.qa_html(number_format($numq)).')') : null,
 				'categoryid' => null,
 			);
+		}
 		
 		if (isset($parentcategories[$parentid]))
 			foreach ($parentcategories[$parentid] as $category)
