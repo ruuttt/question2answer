@@ -25,6 +25,9 @@
 	More about this license: http://www.question2answer.org/license.php
 */
      
+
+
+
 if ((!qa_is_logged_in()) and !((strpos(qa_self_html(),'login') !== false )||(strpos(qa_self_html(),'forgot') !== false ))) {	
 	qa_redirect('login');
 }else{
@@ -54,7 +57,26 @@ if ((!qa_is_logged_in()) and !((strpos(qa_self_html(),'login') !== false )||(str
 			$this->output('<div id="nav_right"></div></div>');
 			$this->nav('sub');
 		}
-		
+
+		function logged_in() // adds points count after logged in username
+		{
+			qa_html_theme_base::logged_in();
+			
+			if (qa_is_logged_in()) {
+				$userpoints=qa_get_logged_in_points();
+				$username=qa_html(qa_get_logged_in_handle());
+				$userid=qa_get_logged_in_userid();
+				$user = qa_db_select_with_pending(qa_db_user_rank_selectspec($userid));
+				$userrank = (int)$user['rank'];
+				$pointshtml=($userpoints==1)
+					? qa_lang_html_sub('main/1_point', '1', '1')
+					: qa_lang_html_sub('main/x_points', qa_html(number_format($userpoints)));
+					
+				$this->output(
+					'<SPAN><a CLASS="qa-logged-in-points" href="index.php?qa=user&qa_1='.$username.'#activity">'.$pointshtml.'(#'. number_format($userrank).')</a></SPAN>'
+				);
+			}
+		}
 			
 			function suggest_next()
 		{
@@ -89,3 +111,4 @@ if ((!qa_is_logged_in()) and !((strpos(qa_self_html(),'login') !== false )||(str
 /*
 	Omit PHP closing tag to help avoid accidental output
 */
+?>
