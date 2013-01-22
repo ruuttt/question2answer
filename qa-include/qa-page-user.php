@@ -572,7 +572,7 @@
 			'answers' => array(
 				'type' => 'static',
 				'label' => qa_lang_html('profile/answers'),
-				'value' => '<SPAN CLASS="qa-uf-user-a-posts">'.qa_html(number_format(@$userpoints['aposts'])).'</SPAN>',
+				'value' => '<SPAN CLASS="qa-uf-user-a-posts">'.qa_html(number_format(@$userpoints['aposts'])).' (each reaction you write<br>will generate 3 points)<br></SPAN>',
 			),
 		),
 	);
@@ -654,7 +654,7 @@
 		$qa_content['form_activity']['fields']['votegot']=array(
 			'type' => 'static',
 			'label' => qa_lang_html('profile/received'),
-			'value' => $votegotvalue,
+			'value' => $votegotvalue . ' <br>(each up vote on your reaction<br> will generate 3 points)',
 		);
 	}
 	
