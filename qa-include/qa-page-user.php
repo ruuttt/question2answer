@@ -695,7 +695,7 @@
 		$qa_content['q_list']['qs']=array();
 		
 		$htmloptions=qa_post_html_defaults('Q');
-		$htmloptions['whoview']=false;
+		$htmloptions['whoview']=true; //false;
 		$htmloptions['avatarsize']=0;
 		
 		foreach ($questions as $question)
