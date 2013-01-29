@@ -367,7 +367,7 @@ background:#D8D8D8;
 
 /* Answer selection */
 
-.qa-a-selection {width:0px;height:0px}
+.qa-a-selection {display: none;}
 
 /* Comments */
 
