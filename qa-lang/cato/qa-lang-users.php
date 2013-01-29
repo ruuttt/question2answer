@@ -77,7 +77,7 @@
 		'new_password_1' => 'New password:',
 		'new_password_2' => 'Retype new password:',
 		'no_blocked_users' => 'No blocked users found',
-		'no_permission' => 'You do not have permission to perform this operation',
+		'no_permission' => 'You do not have enough points to add an action. You need 50 to add actions.',
 		'old_password' => 'Old password:',
 		'only_shown_admins' => '(only shown to admins)',
 		'only_shown_moderators' => '(only shown to moderators)',
