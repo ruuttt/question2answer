@@ -538,7 +538,8 @@
 				'label' => qa_lang_html('main/nav_users'),
 			);
 			
-		if (qa_opt('nav_ask') && (qa_user_permit_error('permit_post_q')!='level'))
+//		if (qa_opt('nav_ask') && (qa_user_permit_error('permit_post_q')!='level'))
+		if (qa_opt('nav_ask'))
 			$qa_content['navigation']['main']['ask']=array(
 				'url' => qa_path_html('ask', (qa_using_categories() && strlen($lastcategoryid)) ? array('cat' => $lastcategoryid) : null),
 				'label' => qa_lang_html('main/nav_ask'),
