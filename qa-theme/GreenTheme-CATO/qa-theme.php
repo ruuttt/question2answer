@@ -28,7 +28,7 @@
 
 
 
-if ((!qa_is_logged_in()) and !((strpos(qa_self_html(),'login') !== false )||(strpos(qa_self_html(),'forgot') !== false ))) {	
+if ((!qa_is_logged_in()) and !((strpos(qa_self_html(),'login') !== false )||(strpos(qa_self_html(),'forgot') !== false )||(strpos(qa_self_html(),'reset') !== false ))) {	
 	qa_redirect('login');
 }else{
 	
