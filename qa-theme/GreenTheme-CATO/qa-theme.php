@@ -67,13 +67,18 @@ if ((!qa_is_logged_in()) and !((strpos(qa_self_html(),'login') !== false )||(str
 				$username=qa_html(qa_get_logged_in_handle());
 				$userid=qa_get_logged_in_userid();
 				$user = qa_db_select_with_pending(qa_db_user_rank_selectspec($userid));
-				$userrank = (int)$user['rank'];
+				$userrank = '';
+				if (is_array($user)){
+					if (array_key_exists('rank',$user)){
+						$userrank = '(#'. number_format((int)$user['rank']).')';
+					}
+				}
 				$pointshtml=($userpoints==1)
 					? qa_lang_html_sub('main/1_point', '1', '1')
 					: qa_lang_html_sub('main/x_points', qa_html(number_format($userpoints)));
 					
 				$this->output(
-					'<SPAN><a CLASS="qa-logged-in-points" href="index.php?qa=user&qa_1='.$username.'#activity">'.$pointshtml.'(#'. number_format($userrank).')</a></SPAN>'
+					'<SPAN><a CLASS="qa-logged-in-points" href="index.php?qa=user&qa_1='.$username.'#activity">'.$pointshtml.$userrank.'</a></SPAN>'
 				);
 			}
 		}
