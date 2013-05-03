@@ -49,3 +49,6 @@
 [submodule "qa-plugin/faq"]
 	path = qa-plugin/faq
 	url = git@github.com:ruuttt/q2a-faq.git
+[submodule "qa-plugin/captcha-antibot"]
+	path = qa-plugin/captcha-antibot
+	url = https://github.com/KrzysztofKielce/q2a-captcha-antibot.git
