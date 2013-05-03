@@ -28,25 +28,139 @@
 
 
 
-if ((!qa_is_logged_in()) and !((strpos(qa_self_html(),'login') !== false )||(strpos(qa_self_html(),'forgot') !== false )||(strpos(qa_self_html(),'reset') !== false ))) {	
+if 
+ (
+   (!qa_is_logged_in()) and 
+   !(
+     (strpos(qa_self_html(),'login') !== false )||
+     (strpos(qa_self_html(),'forgot') !== false )||
+     (strpos(qa_self_html(),'vision') !== false )||
+     (strpos(qa_self_html(),'welcome') !== false )||
+     (strpos(qa_self_html(),'reset') !== false )
+   )
+ ) {	
 	qa_redirect('login');
 }else{
 	
 	class qa_html_theme extends qa_html_theme_base
 	{
+		
+		// source: http://www.question2answer.org/qa/16090/navigate-to-next-and-previous-questions-on-question-page?show=16090#q16090
+// get previous question
+function get_prev_q(){
+ 
+$myurl=$this->request;
+$myurlpieces = explode("/", $myurl);
+$myurl=$myurlpieces[0];
+ 
+if (is_numeric($myurl)){
+	$query_p = "SELECT * 
+	FROM ^posts 
+	WHERE postid < $myurl
+	AND type='Q'
+	ORDER BY postid DESC
+	LIMIT 1";
+	 
+	$prev_q = qa_db_query_sub($query_p);
+	 
+	while($prev_link = qa_db_read_one_assoc($prev_q, true)){
+	 
+	$title = $prev_link['title'];
+	$pid = $prev_link['postid'];
+	 
+	$this->output( '
+	<A HREF="'. qa_q_path_html($pid, $title) .'" style="padding-left:20px" title="'. $title .'" >&larr; Previous Action </A>','');
+	}
+}
+ 
+}
+ 
+// get next question
+function get_next_q(){ 
+ 
+$myurl=$this->request;
+$myurlpieces = explode("/", $myurl);
+$myurl=$myurlpieces[0];
+ 
+if (is_numeric($myurl)){ 
+	$query_n = "SELECT * 
+	FROM ^posts 
+	WHERE postid > $myurl
+	AND type='Q'
+	ORDER BY postid ASC
+	LIMIT 1";
+	 
+	$next_q = qa_db_query_sub($query_n);
+	 
+	while($next_link = qa_db_read_one_assoc($next_q, true)){
+	 
+	$title = $next_link['title'];
+	$pid = $next_link['postid'];
+	 
+	$this->output( '
+	<A HREF="'. qa_q_path_html($pid, $title) .'" title="'. $title .'" STYLE="float:right;padding-right:20px">Next Action &rarr;</A>','');
+	}
+}
+ 
+}
+ 
+// adding next and previouls question links after all answer. This can be place anywhere you want just call get_prev_q() and get_next_q() functions
+function a_list($a_list){
+qa_html_theme_base::a_list($a_list);
+$this->get_prev_q();
+$this->get_next_q();
+}
+
+		
 		function nav_user_search() // reverse the usual order
 		{
 			$this->search();
 			$this->nav('user');
 		}
+
+				function main()
+		{
+			$content=$this->content;
+
+$this->get_prev_q();
+$this->get_next_q();
+			$this->output('<DIV CLASS="qa-main'.(@$this->content['hidden'] ? ' qa-main-hidden' : '').'">');
+			
+			$this->widgets('main', 'top');
+			
+			$this->page_title_error();		
+			
+			$this->widgets('main', 'high');
+
+			/*if (isset($content['main_form_tags']))
+				$this->output('<FORM '.$content['main_form_tags'].'>');*/
+				
+			$this->main_parts($content);
+		
+			/*if (isset($content['main_form_tags']))
+				$this->output('</FORM>');*/
+				
+			$this->widgets('main', 'low');
+
+			$this->page_links();
+			$this->suggest_next();
+			
+			$this->widgets('main', 'bottom');
+
+			$this->output('</DIV> <!-- END qa-main -->', '');
+		}
 		
 		function sidepanel()
 		{
 			$this->output('<DIV CLASS="content-flow"><DIV CLASS="content-top"></DIV><DIV CLASS="content-wrapper"><DIV CLASS="qa-sidepanel">');
+			$this->widgets('side', 'top');
 			$this->sidebar();
-			$this->nav('cat');
+			$this->widgets('side', 'high');
+			$this->nav('cat', 1);
+			$this->widgets('side', 'low');
 			$this->output_raw(@$this->content['sidepanel']);
 			$this->feed();
+			$this->widgets('side', 'bottom');
 			$this->output('</DIV>', '');
 		}
 		
@@ -56,6 +170,7 @@ if ((!qa_is_logged_in()) and !((strpos(qa_self_html(),'login') !== false )||(str
 			$this->nav('main');
 			$this->output('<div id="nav_right"></div></div>');
 			$this->nav('sub');
+
 		}
 
 		function logged_in() // adds points count after logged in username
@@ -113,6 +228,7 @@ if ((!qa_is_logged_in()) and !((strpos(qa_self_html(),'login') !== false )||(str
 	}
 	
 }
+
 /*
 	Omit PHP closing tag to help avoid accidental output
 */
