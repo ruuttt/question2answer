@@ -24,6 +24,19 @@
 	More about this license: http://www.question2answer.org/license.php
 */
 
+/* source: http://webdesignandsuch.com/how-to-fix-sup-sub-line-height-problem-with-css/*/
+sub, sup { 
+	font-size: 75%;
+	line-height: 0; 
+	position: relative; 
+	vertical-align: baseline; 
+}
+sup { 
+	top: -0.5em; 
+}
+sub { 
+	bottom: -0.25em; 
+}
 
 /* General page layout */
 
@@ -55,8 +68,8 @@ width:980px; margin:0 auto; text-align:left;}
 
 /* Headings */
 
-h1 {margin:1em 0 0.5em 0; color:#307E01; font-size:28px; font-weight:bold;}
-h2 {font-size:22px; color:#339933; padding-top:12px; clear:both;}
+h1 {margin:1em 0 0.5em 0; color:#307E01; font-size:20px; font-weight:bold;}
+h2 {font-size:16px; color:#339933; padding-top:12px; clear:both;}
 /*
 .qa-favoriting {
 	// float:right;
@@ -321,7 +334,7 @@ background:#D8D8D8;
 
 .qa-q-view {padding-left:10px; padding-top:10px;}
 .qa-q-view-main {float:left; width:550px; padding-left:10px;}
-.qa-q-view-content {font-size:16px; margin-bottom:16px;}
+.qa-q-view-content {font-size:14px; margin-bottom:16px;}
 .qa-q-view-avatar {display:inline-block; vertical-align:middle; margin-right:8px;}
 .qa-q-view-meta {display:inline-block; vertical-align:middle; font-size:14px;}
 .qa-q-view-follows {font-size:14px; margin-bottom:12px;}
