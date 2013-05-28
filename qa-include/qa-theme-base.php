@@ -279,7 +279,7 @@
 		
 		function css_name()
 		{
-			return 'qa-styles.css?'.QA_VERSION;
+			return 'qa-styles.css?'.QA_VERSION.'c';
 		}
 		
 		function head_lines()
