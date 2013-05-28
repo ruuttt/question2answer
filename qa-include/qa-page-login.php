@@ -79,7 +79,7 @@
 					elseif ($passwordsent)
 						qa_redirect('account');
 					else
-						qa_redirect('');
+						qa_redirect('welcome');
 	
 				} else
 					$errors['password']=qa_lang('users/password_wrong');
