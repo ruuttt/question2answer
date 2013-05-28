@@ -118,12 +118,12 @@ h2 {font-size:16px; color:#339933; padding-top:12px; clear:both;}
 .qa-feed-link {font-size:12px; color:#666;}
 .qa-main {padding-left:20px; float:left; width:750px; margin-bottom:24px;}
 .qa-main-hidden h1 {color:#999;}
-.qa-footer {clear:both; background:url(center1.png) no-repeat left top; color:#FFF; font-size:10px; padding:10px; padding-top:130px; margin:1px;}
+.qa-footer {clear:both; background:url(center1d.png) no-repeat left top; color:#FFF; font-size:10px; padding:10px; padding-top:130px; margin:1px;}
 * html .qa-footer {padding-top:6px;} /* IE6 */
 
 /* Header sections */
 
-.qa-logo {float:left; margin-bottom:16px; padding-left:20px; padding-top:10px; font-size:48px; font-weight:bold; color:#6a1b56; height:61px;}
+.qa-logo {float:left; margin-bottom:16px; padding-left:20px; padding-top:10px; font-size:36px; font-weight:bold; color:#6a1b56; height:61px;}
 .qa-logo-link, .qa-logo-link:hover {color:#E8E8E8;}
 
 .qa-search {float:right;  margin-top:20px; margin-right:10px; white-space:nowrap;}
