@@ -54,11 +54,25 @@ $myurlpieces = explode("/", $myurl);
 $myurl=$myurlpieces[0];
  
 if (is_numeric($myurl)){
-	$query_p = "SELECT * 
-	FROM ^posts 
-	WHERE postid < $myurl
+	$query_n = "SELECT ^posts.*,^categories.position 
+	FROM ^posts INNER JOIN ^categories ON ^posts.categoryid = ^categories.categoryid
+	WHERE postid = $myurl
 	AND type='Q'
-	ORDER BY postid DESC
+	LIMIT 1";
+	 
+	$current_q = qa_db_query_sub($query_n);
+	 
+	while($current_link = qa_db_read_one_assoc($current_q, true)){
+		$categoryid = $current_link['categoryid'];
+		$categoryposition = $current_link['position'];
+	}
+	$combinedid = $categoryposition*1000000-$myurl;
+
+	$query_p = "SELECT ^posts.* 
+	FROM ^posts  INNER JOIN ^categories ON ^posts.categoryid = ^categories.categoryid
+	WHERE position*1000000-postid < $combinedid
+	AND type='Q'
+	ORDER BY position*1000000-postid DESC
 	LIMIT 1";
 	 
 	$prev_q = qa_db_query_sub($query_p);
@@ -69,7 +83,7 @@ if (is_numeric($myurl)){
 	$pid = $prev_link['postid'];
 	 
 	$this->output( '
-	<A HREF="'. qa_q_path_html($pid, $title) .'" style="padding-left:20px" title="'. $title .'" >&larr; Previous Action </A>','');
+	<A HREF="'. qa_q_path_html($pid, $title) .'" style="padding-left:20px" title="'. $title .'" ><img style="border:0px;width:50px" src="../qa-theme/GreenTheme-CATO/previous.png"/> Previous Action </A>','');
 	}
 }
  
@@ -83,11 +97,25 @@ $myurlpieces = explode("/", $myurl);
 $myurl=$myurlpieces[0];
  
 if (is_numeric($myurl)){ 
-	$query_n = "SELECT * 
-	FROM ^posts 
-	WHERE postid > $myurl
+	$query_n = "SELECT ^posts.*,^categories.position
+	FROM ^posts INNER JOIN ^categories ON ^posts.categoryid = ^categories.categoryid
+	WHERE postid = $myurl
 	AND type='Q'
-	ORDER BY postid ASC
+	LIMIT 1";
+	 
+	$current_q = qa_db_query_sub($query_n);
+	 
+	while($current_link = qa_db_read_one_assoc($current_q, true)){
+		 $categoryid = $current_link['categoryid'];
+		 $categoryposition = $current_link['position'];
+	}
+	$combinedid = $categoryposition*1000000-$myurl;
+
+	$query_n = "SELECT ^posts.* 
+	FROM ^posts INNER JOIN ^categories ON ^posts.categoryid = ^categories.categoryid
+	WHERE position*1000000-postid > $combinedid 
+	AND type='Q'
+	ORDER BY position*1000000-postid ASC
 	LIMIT 1";
 	 
 	$next_q = qa_db_query_sub($query_n);
@@ -98,7 +126,7 @@ if (is_numeric($myurl)){
 	$pid = $next_link['postid'];
 	 
 	$this->output( '
-	<A HREF="'. qa_q_path_html($pid, $title) .'" title="'. $title .'" STYLE="float:right;padding-right:20px">Next Action &rarr;</A>','');
+	<A HREF="'. qa_q_path_html($pid, $title) .'" title="'. $title .'" STYLE="float:right;padding-right:20px">Next Action <img style="border:0px;width:50px" src="../qa-theme/GreenTheme-CATO/next.png"/></A>','');
 	}
 }
  
